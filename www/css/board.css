@@ -1,0 +1,164 @@
+.listboard{
+    margin-top:50px;
+    margin-bottom: 50px;
+}
+
+.searchbox{
+    border:1px solid #e2e2e2;
+    background-color: #f9f9f9;
+    padding:15px 0;
+    text-align: center;
+}
+#stype{
+    height: 35px;
+    vertical-align: middle;
+    border:1px solid #e2e2e2;
+    font-size: 0.95em;
+    
+    max-width: 200px;
+    width: 20%;
+    padding-left: 3px;
+    letter-spacing: -0.05em;
+}
+#keyword{
+    height: 35px;
+    vertical-align: middle;
+    border:1px solid #e2e2e2;
+    padding-left: 3px;
+    width: 55%;
+    max-width: 390px;
+    font-size: 0.95em;
+    letter-spacing: -0.05em;
+}
+#sbtn{
+    height: 35px;
+    vertical-align: middle;
+    border: none;
+    color:white;
+    background-color: #5d5d5d;
+    padding:0px 20px;
+}
+/*  */
+.list{
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+.listitem{
+    overflow: auto;
+    margin-bottom: 45px;
+    display: block;
+}
+
+.listitem .ratiobox{
+    float: left;
+    width: 20%;
+    height: 144px;
+}
+.listitem .ratiobox img{
+   width: 100%;
+}
+.listtext{
+    float: right;
+    width: 77%;
+    height: 144px;
+}
+.listtext p{
+    color:#0e468f;
+    font-size:1.05em;
+    margin-bottom: 0.3em;
+    overflow:hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+
+}    
+.txtover{
+    color:#262626;
+    font-size:14px;
+    line-height: 1.6em;
+
+    overflow: hidden;
+    height: 70px;
+}
+.listtext>span{
+    font-size:0.9em;
+    color:#555;
+    display: block;
+    margin-top: 1em;
+}
+/* 페이지 부분 스타일 */
+.pagi{
+    border-top:1px solid #cdcdcd;
+    padding:30px 0px;
+    text-align: center;
+}
+.pagi a{
+    display: inline-block;
+    height: 25px;
+    line-height: 25px;
+    vertical-align: middle;
+}
+.pagi a:not(.pagi-num){
+    width: 25px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.pagi-num{
+    border:1px solid #dbdbdb;
+    padding:0px 0.5em;
+    color:#262626;
+}
+.pagi-num:hover{
+    color:#0c4da2;
+}
+.pactive{
+    background-color: #0c4da2;
+    color:white;
+    font-weight: bold;
+    border:none;
+    padding:0px 0.6em;
+}
+.pactive:hover{
+    color:white;
+}
+.pagi-first{
+    background-image: url(../images/board_pagi_first.gif);
+}
+.pagi-prev{
+    background-image: url(../images/board_pagi_prev.gif);
+    
+}
+.pagi-next{
+    background-image: url(../images/board_pagi_next.gif);
+
+}
+.pagi-last{
+    background-image: url(../images/board_pagi_last.gif);
+}
+@media all and (max-width: 500px){
+    .listitem .ratiobox,
+    .listtext
+    {
+        float: none;
+        width: 100%;
+    }
+    .listtext{
+        margin-top: 0.5em;
+    }
+    .listitem{
+        border-bottom:1px solid #efefef;
+    }
+
+}
+@media all and (max-width: 400px){
+    #stype{
+        width: 18%;
+    }
+    #keyword{
+        width: 50%;
+    }
+    .pagi-num{
+        letter-spacing: -0.1em;
+        font-size:0.9em;
+        padding:0px 0.3em;
+    }
+}

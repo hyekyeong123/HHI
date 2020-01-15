@@ -1,0 +1,885 @@
+@charset "utf-8";
+*{
+    padding:0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+@import url('https://fonts.googleapis.com/css?family=Nanum+Gothic:400,700,800&display=swap');
+
+body{
+    font-family: 'Nanum Gothic', sans-serif;
+}
+a{
+    text-decoration: none;
+    color:#777;
+    font-size:13px;
+}
+nav ul, nav ol{
+    list-style: none;
+}
+header{
+    position: fixed;
+    z-index: 50000;
+    width:100%;
+    background-color: white;
+
+}
+.cen1{
+    max-width: 1600px;
+    width:100%;
+    margin: auto;
+    
+    /* position: relative; */
+}
+#bread{
+    /* display: none; */
+}
+
+.cen2{
+    max-width: 1100px;
+    width:100%;
+    margin: auto;
+}
+
+#gnb{
+    text-align: right;
+    height: 41px;
+    background-color: #f8f8f8;
+    border-bottom: 1px solid #dddce3;
+    padding-top: 8px;
+}
+.gnblink{
+    font-size:0.8em;
+    color:#666;
+}
+#verticalbar{
+    color:#666;
+    font-size:0.6em;
+    margin: 2px;
+}
+#gnb a{
+    /* font-size: 13px; */
+    /* line-height: 41px;//이렇게 하면 밑에 요소까지 라인하이트가 들어가서 틀린 표현 */
+}
+#blogbtn{
+    display: inline-block;
+    background-color: #999;
+    color:white;
+    font-size:0.8em;
+    /* text-align: center; 이거 해봤자 안 먹음 나 왜 사용했냐 */
+    line-height: 26px;
+    padding:0em 0.9em;
+    height: 26px;
+    margin-left: 15px;
+}
+#direct{
+    width:135px;
+    display: inline-block;
+    text-align: left;
+    font-size:0.8em;
+    cursor: pointer;
+    font-weight: 700;
+    line-height: 26px;
+}
+#direct a{
+    color:white;
+}
+#direct_mark{
+    height: 26px;
+    background-color: #0e60bf;
+    padding-left: 10px;
+    background-image: url(../images/header_caret_0.png);
+    background-repeat: no-repeat;
+    background-position: 90% center;
+    color:white;
+}
+#direct_cont{
+    display: none;
+    position: absolute;
+    width:135px;
+    z-index:15000;
+}
+#direct_cont a{
+    display: block;
+    width:100%;
+    padding-left: 10px;
+    background-color: #0e60bf;
+    color:white;
+    border-top:#3e80cc;
+}
+#direct_cont a:hover{
+    background-color: #104e96;
+}
+#direct>.reverse{
+    background-image: url(../images/header_caret_1.png);
+}
+/*----------------------------------------------------------------------*/
+#lnb{
+    /* position: relative; */
+    border-bottom: 1px solid #ddddec;
+    /* border-top:1px solid #ddddec; */
+    height: 81px;
+
+}
+#lnb .cen1{
+    position: relative;
+}
+h1 {
+    padding-top:20px;
+    position: absolute;
+    left:10px;
+}
+#ham{
+    /* display: none; */
+    width:50px;
+    height: 50px;
+    border:none;
+    background-color: transparent;
+    float: right;
+    margin-top: 12px;
+}
+#ham img{
+    width:25px;
+}
+/* -------------pc 대화면 메뉴바 스타일----------------------------------- */
+#pcnav{
+    position: absolute;
+    z-index: 10000;
+    overflow:hidden;
+    height: 80px;
+    left:50%;
+    transform: translateX(-50%);
+    width:900px;
+}
+/* ///////////////////////////////////////////////////////////////// */
+nav:hover #back{
+    display: block;
+}
+#back{
+    background-color: white;
+    width:100%;
+    height: 260px;
+    display: none;
+    position: absolute;
+    z-index: 100;
+    border-bottom:1px solid #e5e5e5;
+}
+/* ////////////////////////////////////////////////////////////////////////// */
+.main{
+    width:180px;
+    float: left;
+    text-align: center;
+    /* padding-top:24px;
+    padding-bottom:20px;
+    position: relative; */
+}
+.main:hover>a{
+    color:#0a55a4;
+}
+.sub a:hover{
+    color:#0a55a4;
+}
+.main a{
+    height: 80px;
+    display: block;
+    width:100%;
+    line-height: 80px;
+    color:#111;
+    font-size:1.2em;
+    font-weight: 700;
+    
+}
+.sub{
+    border-left:1px solid #e5e5e5;
+    position: relative;
+    padding-top: 15px;
+    font-size:0.92em;
+    font-weight: 700;
+    height: 260px;
+    /* display: none; */
+    /* left:17px;
+    background-color: #fff; */
+
+}
+.sub::before{
+    content: "";
+    display: block;
+    position: absolute;
+    width:0;
+    height: 2px;
+    background-color: #0455a4;
+    top:0px;
+    left:50%;
+    transform:translateX(-50%);
+    transition: width 0.2s;
+}
+.main:hover>.sub::before{
+    width:100%;
+}
+
+
+
+
+.main:last-of-type .sub{
+    border-right: 1px solid #e5e5e5;
+}
+.sub a{
+    color:#666;
+    display: block;
+    height: 33px;
+    line-height: 33px;
+}
+#ham{
+    display: none;
+}
+
+
+
+#bread{
+    /* display: none; */
+}
+/* //////////////////////////////////////////////////////////////////// */
+#mnav{
+    /* display: none; */
+    position:fixed;
+    width:250px;
+    top:0px;
+    bottom:0px;
+    background-color: #0d315b;
+    list-style: none;
+    overflow: auto;
+    right:-250px;
+}
+.msub{
+    list-style: none;
+    display: none;
+}
+.mmain>a{
+    color:white;
+    font-weight:700;
+    display: block;
+    padding:1.2em 1.1em;
+    padding-right: 0.7em;
+    border-bottom:1px solid #26466c;
+}
+.msub a{
+    display: block;
+    height: 45px;
+    line-height: 45px;
+    background-color: #f0f0f0;
+    color:#666;
+    font-weight: 700;
+    font-size: 0.9em;
+    padding-left: 1.5em;
+    border-bottom: 1px solid #e0e0e0;
+}
+.msub a:hover{
+    color:#222;
+    background-color: #f5f5f5;
+    
+}
+.plus{
+    float:right;
+    opacity: 0.8;
+    border:1px solid white;
+    display: block;
+    width:22px;
+    height: 22px;
+    text-align: center;
+    line-height: 22px;
+}
+#mback{
+    position: fixed;
+    top:0;
+    bottom: 0;
+    left:0;
+    right: 0;
+    background-color: black;
+    opacity: 0.5;
+    display: none;
+}
+/* .aative>a{
+    font-weight:800;
+} */
+/* ///////////////////////////////////////////////////////////////// */
+
+/*//////////////////////////////////////////////////////////////*/
+footer{
+    background-color: #2d3032;
+    word-break: keep-all;
+}
+footer .cen2{
+    padding: 30px 10px;
+    overflow: auto;
+}
+#flogo,
+#copy,
+#secure{
+    float: left;
+}
+#sitelinkbox,
+#wa{
+    float: right;
+}
+#copy{
+    color:white;
+    font-size:0.75em;
+    line-height: 1.5em;
+    margin-bottom: 10px;
+}
+
+#flogo{
+    margin-right: 20px;
+}
+
+select{
+    /* //벤더프리픽스 */
+    -webkit-appearance: none;
+    -moz-appearance:none;
+    background-image: url(../images/select_caret_0.gif);
+    background-repeat: no-repeat;
+    background-position: calc(100% - 7px) center;
+}
+
+#linklist{
+    width:150px;
+    padding:3px 5px 6px 7px;
+    font-size:0.75em;
+    letter-spacing: -0.02em;
+    border:none;
+    outline: none;
+}
+.graybtn{
+    padding:0.4em 1em; 
+    background-color:#3c3f41;
+    color:white;
+    font-size:0.75em;
+    border:none;
+    outline:none;
+}
+#linkbtn{
+    cursor: pointer;
+}
+#secure{
+    clear: both;
+    margin-top: 15px;
+}
+#sitelinkbox a img{
+    display: block;
+}
+#sitelinkbox a{
+    display: inline-block;
+    margin-top: 1px;
+}
+#sitelinkbox a,
+#linklist,
+#linkbtn{
+    vertical-align: middle;
+}
+#wa{
+    margin-top:10px;
+}
+/* //////////////////////브레드크럼////////////////////////////// */
+#bread{
+    height: 46px;
+    line-height: 46px;
+    background-color:#adb6ba;
+    border-bottom:1px solid white;
+}
+#bread a{
+    color:white!important;
+}
+
+#home,
+#depth1,
+#depth2{
+    float: left;
+    border-left: 1px solid white;
+    color:white;
+    font-size:0.9em;
+    cursor: pointer;
+}
+#home,
+#depth1_mark,
+#depth2_mark{
+    border-bottom: 1px solid white;
+    padding-left: 12px;
+    height: 46px;
+}
+#home{
+    width:141px;
+    background-color: #8a969e;
+    background-image: url(../images/bc_icon_home.png);
+    background-repeat: no-repeat;
+    background-position:  15px center;
+    padding-left: 40px;
+}
+#depth1{
+    width:163px;
+    background-color: #778288;
+}
+#depth2{
+    width: 256px;
+    background-color: #676e71;
+}
+#depth1_mark,
+#depth2_mark{
+    background-image: url(../images/bc_icon_caret.png);
+    background-repeat: no-repeat;
+    background-position:  calc(100% - 15px) center;
+}
+#depth1_cont,
+#depth2_cont{
+    position: absolute;
+    background-color: #778288;
+    border:1px solid white;
+    border-top: none;
+    margin-left: -1px;
+    line-height: 32px;
+}
+#depth1_cont a,
+#depth2_cont a{
+    display: block;
+    padding-left: 12px;
+}
+
+#depth1_cont{
+    width:164px;
+}
+#depth2_cont{
+    width: 257px;
+}
+#depth1_cont a:hover,
+#depth2_cont a:hover
+{
+    background-color: #60696c;
+}
+/* /////////////////////타이틀 박스/////////////////////////////// */
+#titlebox{
+    padding-top:27px;
+    padding-bottom:45px;
+}
+#imgtitle{
+    position: relative;
+}
+#imgtitle img{
+    width:100%;
+    display: block;
+}
+#imgtitle div{
+    position: absolute;
+    top:0;
+    right: 0;
+    width:35%;
+    padding:2em 1.8em;
+    color:white;
+    text-align: right;
+    background-color: rgba(16,78,150,0.8);
+}
+#titlebox h2{
+    font-size:2.0em;
+}
+
+h2.engtitle{
+    font-size:1.2em!important;
+    margin-top: 0.4em;
+}
+#titlebox h3{
+    color:#0c4da2;
+    font-size:1.7em;
+    padding-left:10px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+#titlebox p{
+    color:#333;
+    font-size:1.25em;
+    padding-left:10px
+}
+section{
+     padding:0px 10px;
+}
+section h4{
+    font-size:1.3em;
+    color:#333;
+    margin-top: 2.5em;
+    margin-bottom:1em ;
+}
+section p{
+    font-size:0.95em;
+    color:#333;
+    line-height: 1.4em;
+    margin-bottom: 1em;
+}
+/* ///////////////////////탭 버튼 스타일//////////////////////////////////////// */
+#tabbtn_box{
+    height: 65px;
+    padding:0px 10px;
+}
+#tabcont_box{
+    padding:0px 10px;
+}
+.tabbtn{
+    width:calc((100% + 2px) / 3);
+    height: 60px;
+    float:left;
+    background-color: #f5f5f5;
+    border: 1px solid #c6c6c6;
+    margin-left: -1px;
+    outline: none;
+    cursor: pointer;
+    font-size:1.3em;
+    font-weight: 700;
+    color: #262626;
+}
+.tabbtn:hover{
+    color:#0c4da2;
+}
+.tabbtn:first-of-type{
+    margin-left: 0px;
+}
+.tactive{
+    height: 65px;
+    background-color: white;
+    border-bottom: none;
+    margin-top: -5px;
+}
+/* ////////////////////////탭 콘텐트 스타일/////////////////// */
+.tabcont{
+    display:none;
+}
+.tabcont:first-of-type{
+    display: block;
+}
+
+
+
+/* ////////////////////////////////테이블 스타일//////////////////////////////////////////// */
+table{
+    border-top: 2px solid #767676;
+    width: 100%;
+    border-collapse: collapse;
+    border-bottom:1px solid #efefef!important;
+    margin-top:1em;
+    margin-bottom: 2em;
+    min-width: 720px;
+}
+table th{
+    color:#333;
+    border-bottom:1px solid #c3c3c3;
+}
+table th,
+table td
+{
+    padding:0.7em 1.2em;
+    border-right:1px solid #efefef;
+}
+table td{
+    color:#666;
+    border-bottom:1px solid #efefef;
+}
+th:last-child,
+td:last-child{
+    border-right: none;
+}    
+.align-left{
+    text-align: left;
+    padding-left: 18px;
+    color:#333;
+    background-color: #f9f9f9;
+    border-bottom:1px solid #efefef!important;
+}
+/* //모두 오른쪽 정렬하고 싶을 때 */
+.tableright td{
+    text-align: right;
+}
+.newtable{
+    overflow: auto;
+}
+/* ///////////////////////////////////////////////////////////////// */
+.list-blue,
+.list-circle{
+    list-style: none;
+    margin-top: 1em;   
+}
+.list-blue li,
+.list-circle li
+{
+    overflow: auto;
+    margin-bottom: 10px;
+}
+.list-blue .li-num{
+    float:left;
+    background-color:#0c4da2;
+    color:white;
+    width:50px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+
+}
+.list-blue .li-txt{
+    float:left;
+    background-color:#f3f3f3;
+    min-height: 50px;
+    width:calc(100% - 50px);
+    padding:15px;
+    color:#333;
+
+}
+/* //------------------------------------- */
+.list-circle .li-num{
+    width:1.3em;
+    height:1.3em;
+    border:1px solid;
+    border-radius: 50%;
+    font-size:0.75em;
+    text-align: center;
+    float: left;
+    margin-top: 2px;
+
+}
+.list-circle .li-txt{
+    float:left;
+    width:calc(100% - 1.8em);
+    margin-left: 0.5em;
+}
+/* //-------------------------------------- */
+.box-blue{
+    overflow: auto;
+    position: relative;
+    margin-bottom: 1.4em;
+    margin-left: 10px;
+    margin-right: 10px
+}
+.box-blue .box-title{
+    position: absolute;
+    top:0;
+    bottom:0;
+    width:20%;
+    background-color:#0c4da2;
+    color:white;
+    text-align: center; 
+    /* //안의 글씨를 가운데 정렬 */
+}
+.box-blue .box-title>span{
+    position: absolute;
+    left:50%;
+    top:50%;
+    transform: translate(-50%,-50%);
+}
+.box-blue .box-title>span>span{
+    display: block;
+}
+.box-blue .box-cont{
+    width:80%;
+    float:right;
+    background-color: #f6f6f6;
+    padding:1.5em 1em 0.8em 1em;
+    color:#333;
+    font-size:0.95em;
+}
+.box-cont ul,
+.box-cont ol{
+    list-style: none;
+}
+/* //1단계 리스트 */
+.box-blue .box-cont>ul>li{
+    margin-left: 1em;
+    margin-bottom: 0.6em;
+}
+.box-blue .box-cont>ul>li::before{
+    content: "";
+    display:block;
+    width:5px;
+    height:5px;
+    background-color: #3d71b5;
+    position: absolute;
+    margin-left: -0.65em;
+    margin-top: 0.5em;
+
+}
+/* 2단계리스트 */
+.box-blue .box-cont>ul>li>ul>li{
+    margin-left: 0.3em;
+    margin-bottom: 0.3em;
+}
+.box-blue .box-cont>ul>li>ul>li:before{
+    content: "-";
+    margin-right: 0.7em;
+
+}
+/* //-------------------------------------------------------- */
+.align-center{
+    text-align: center;
+}
+.align-center img{
+    max-width: 100%;
+}
+hr{
+    border:none;
+   height: 1px;
+    background-color: #d7d7d7;
+    margin-bottom: 50px;
+}
+.mark{
+    color:#0c4da2;
+    font-weight: 800;
+    text-shadow: 0px 0px 0.08em #09409e;
+}
+.align-right{
+    text-align: right;
+}
+/* /////////////////////////////////////////////////////////////////////// */
+/* 1450초과 : 대 화면 pc;
+1450초과 1250초과 : 소 화면 pc;
+1250이하 1025초과 : 태블릿 pc;
+1025이하 모바일 */
+
+/* //////////////////////////////////////소 화면 pc//////////////////// */
+@media all and (max-width:1450px){
+    #lnb .cen2{
+        position: relative;
+    }
+    #pcnav{
+        left:auto;
+        transform: none;
+        right:0;
+    }
+}
+
+/* //////////////////////////////////////태블릿 pc//////////////////// */
+@media all and (max-width:1250px){
+    #pcnav
+    {
+        width:750px;
+    }
+    .main{
+        width:150px;
+    }
+
+}
+
+/* //////////////////////////////////////모바일//////////////////// */
+@media all and (max-width:1025px){
+    #gnb{
+        padding-left: 10px;
+    }
+    #wa,
+    #direct,
+     #pcnav{
+        display: none;
+    }
+    .blogbtn{
+        margin-left: 5px;
+    }
+    #ham{
+        display: block;
+    }
+    #lnb{
+        height: 71px;
+    }
+    h1{
+        padding-top: 13px;
+    }
+    footer .cen2{
+        padding-bottom:60px;
+    }
+    #bread{
+        display: none;
+    }
+    #imgtitle>div{
+        font-size:0.8em;
+   
+    }
+    #titlebox p{
+        font-size:1em;
+    }
+    #titlebox{
+        padding-top:0;
+    }
+    .tabbtn{
+        font-size:0.9em;
+    }
+}
+/* ////////////////푸터 1단계 변신/////////////////////////////////////////////// */
+@media all and (max-width:820px){
+    #sitelinkbox{
+        float: left;
+    }
+    #secure a{
+        display: inline-block;
+        margin-top: 5px;
+    }
+    #linklist{
+        width: 200px;
+    }
+    #sitelinkbox{
+        line-height: 2em;
+    }
+
+
+
+}
+/* ////////////////////////푸터 2단계 변신//////////////////////////////////////////////// */
+@media all and (max-width:770px){
+    #secure,
+    #copy,
+    #sitelinkbox{
+        float: none;
+        text-align: center;
+    }
+    #flogo{
+        display: none;
+    }
+    #imgtitle>div{
+        font-size:0.5em;
+        width:100%;
+        bottom: 0;
+        background-color: rgba(73, 73, 73, 0.5);
+    }
+    .list-blue .li-num{
+        width:20px;
+        height: 18px;
+        line-height: 18px;
+        font-size:0.9em;
+        margin-left: 10px;
+        margin-right: 20px;
+    }
+    .list-blue .li-txt{
+        background-color: white;
+        padding-left:0px;
+        padding-top:0px;
+        padding-bottom: 0px;
+        min-height: 30px;
+    }
+    .list-blue>li{
+        border-bottom: 1px solid #f8f8f8;
+    }
+    .box-blue .box-title{
+        position: static;
+        width:100%;
+        padding:0.4em 0;
+        font-size:0.95em;
+    }
+    .box-blue .box-title>span{
+        position: static;
+    }
+    .box-blue .box-title>span>span{
+        display: inline-block;
+    }
+    .box-blue .box-cont{
+        width:100%;
+        float: none;
+        border:1px solid #e8e8e8;
+        background-color: white;
+        padding:1em 0.4em;
+        font-size:0.9em;
+    }
+    .box-blue{
+        margin-left:0;
+        margin-right:0;
+    }
+
+}
+/* //----------------------------------------------------------- */

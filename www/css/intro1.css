@@ -1,0 +1,64 @@
+#history{
+    height: 550px;
+    background-image: url(../images/stat_bg_0.jpg);
+    position: relative;
+    margin-bottom: 50px;
+}
+#history>ul{
+    position:absolute;
+    background-color: rgba(5,35,88,0.8);
+    bottom: 0;
+    color:white;
+    font-size: 0.9em;
+    line-height: 1.4;
+    padding:12px 20px;
+    list-style: none;
+    width: 540px;
+
+}
+#history>ul>li{
+    border-bottom:1px solid rgba(255,255,255,0.1);
+    padding:0.8em 0;
+    overflow: auto;
+}
+#history>ul>li:last-of-type{
+    border-bottom:none;
+
+}
+#history>ul>li>span:first-of-type{
+    width: 92px;
+    /* //인라인은 사이즈를 못 주기 때문에 */
+    display: block;
+    float: left;
+}
+#history>ul>li>span:last-of-type::before{
+    content: "|";
+    position: absolute;
+    margin-left: -10px;
+    color: rgba(255,255,255,0.2);
+    font-size: 0.9em;
+}
+#history>ul>li>span:last-of-type{
+    width: calc(100% - 92px);
+    display: block;
+    float: left;
+}
+@media all and (max-width:1025px){
+    #history{
+        height: 350px;
+    }
+
+
+
+}
+@media all and (max-width:580px){
+    #history{
+        height: 450px;
+        font-size: 0.9em;
+        background-position: center;
+    }
+    #history>ul{
+        width: 100%;
+    }
+    
+}

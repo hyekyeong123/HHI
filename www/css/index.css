@@ -1,0 +1,289 @@
+#visual{
+    padding:0px;
+}
+.slick-arrow{
+    width:52px;
+    height: 52px;
+    outline: none;
+    border:none;
+    position: absolute;
+    top:50%;
+    transform: translateY(-50%);
+    z-index:10;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+}
+.slick-prev{
+    background-image: url(../images/slider_btn_prev.png);
+    left:10px;
+}
+.slick-next{
+    right: 10px;
+    background-image: url(../images/slider_btn_next.png);
+}
+.slide{
+    position: relative;
+}
+.slide .cen2{
+    position: absolute;
+    z-index: 20;
+    top:8em;
+    left:50%;
+    transform: translateX(-50%);
+}
+#bread{
+    display: none;
+}
+.big{
+    font-size:2.8em;
+    font-weight: 700;
+    letter-spacing: -0.1em;
+}
+.small{
+    font-weight: bold;
+    font-size:1.3em;
+}
+
+.slide1 .big,
+.slide1 .small,
+.slide2 .big,
+.slide2 .small
+{
+    text-shadow: 0px 0px 5px #0f2e43;
+    color:white!important;
+}
+.slide3 .big,
+.slide3 .small{
+    color:#1b58a8;
+    text-align: right;
+    text-shadow: 0px 0px 5px white,0px 0px 5px white,0px 0px 5px white,0px 0px 5px white;
+}
+.slide img{
+    width:100%;
+}
+.slick-dots button{
+    color:transparent;
+    width:19px;
+    height: 19px;
+    background: transparent;
+    border:none;
+    outline: none;
+    cursor: pointer;
+    border-radius: 50%;
+    border:2px solid white;
+    margin: 0px 7px;
+}
+.slick-dots>li{
+    display: inline-block;
+    vertical-align: middle;
+}
+.slick-dots{
+    text-align: center;
+    bottom:60px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.slick-active button{
+    background-color: white;
+}
+#pause{
+    display: block;
+    width:20px;
+    height: 20px;
+    background-image: url(../images/slider_btn_pause_play.png);
+    background-repeat: no-repeat;
+    background-position: 4px 1px ;
+    margin-left: 5px;
+    cursor: pointer;
+}
+#play{
+    display: block;
+    width:20px;
+    height: 20px;
+    background-repeat: no-repeat;
+    background-image: url(../images/slider_btn_pause_play.png);
+    background-position: -23px 1px ;
+    cursor: pointer;
+}
+.sel{
+    filter:brightness(0.85);
+}
+/* 블로그 스타일------------------------------------------ */
+#blog{
+    background-color: #ececec;
+    padding:50px 0;
+}
+
+#artbox{
+    overflow: auto;
+    margin-top: 30px;
+    padding:0px 25px;
+}
+#artbox a{
+    display: block;
+    width: calc((100% - 24px) / 4);
+    float:left;
+    margin:0px 3px 20px 3px;
+
+}    
+#blog>.cen2>div{
+    text-align: center;
+}
+.artimg{
+    height: 180px;
+}
+.arttxt{
+    background-color: white;
+    padding:25px 12px 15px 12px;
+}
+.arttxt p{
+    font-weight: 800;
+    color:#0c4da2;
+/*  */
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+.txtover{
+    color:#777;
+    font-size:0.85em;
+    line-height: 1.7em;
+    overflow: hidden;
+    height: 70px;
+}
+
+/* //---------------슬로건 영역 스타일----------------------------------------------- */
+#slogan{
+    padding-top:60px;
+    padding-bottom: 70px;
+    text-align: center;
+}
+.quote::before{
+    content: url(../images/index_quote_open.png);
+    margin-right:15px;
+    vertical-align: 7px;
+}
+.quote::after{
+    content: url(../images/index_quote_close.png);
+    margin-left: 15px;
+}
+.quote{
+    font-size:1.8em;
+    font-weight: bold;
+    color:#0c4da2;
+}
+#slogan>p{
+    margin-top: 25px;
+    font-size:1.3em;
+    line-height: 1.7;
+    margin-bottom: 50px;
+    word-break: keep-all;
+}
+#fav div{
+    background-color: #edeef0;
+    border-radius: 50%;
+    width:125px;
+    height: 125px;
+    background-image: url(../images/fav_icon_sprite.png);
+    background-repeat: no-repeat;
+    transition: background-color 0.4s;
+    /* display: inline-block; */
+}
+#fav a{
+    display: inline-block;
+    /* //a한테 줘야함!!!! */
+    margin: 0px 15px;
+}
+#fav a p{
+    margin-top: 0.8em;
+    font-size:1.05em;
+    font-weight: 700;
+    color:#262626;
+}
+#fav a:hover div{
+    background-color: #b7c9e4;
+}
+#fav a:hover p{
+    color:#0c4da2;
+}
+#icon1{
+    background-position: 7px center;
+}
+#icon2{
+    background-position: -102px center;
+}
+#icon3{
+    background-position: -209px center;
+}
+#icon4{
+    background-position: -320px center;
+}
+#fav>span{
+    display: inline-block;
+}
+.artimg img{
+    transition: transform 10s;
+}
+.artimg:hover img{
+    transform: translate(-50%,-50%) scale(1.5);
+}
+/* //-------------블로그 영역 스타일------------------------------------------ */
+
+
+/* //---------------------------------------------------------------------- */
+@media all and (max-width : 1100px){
+    .slide .cen2{
+        padding-left: 2em;
+        padding-right: 3em;
+    }
+}
+/* //--------------------------------------------------------------------- */
+@media all and (max-width : 720px){
+    .slick-dots{
+        bottom:1.5em;
+    }
+    .slide{
+        font-size:0.7em;
+    }
+    .slick-arrow{
+        display: none!important;
+    }
+    .quote::before,
+    .quote::after{
+        content:none;
+    }
+    #artbox a{
+        width:calc((100% - 12px) / 2 );
+    }
+    #artbox{
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+}
+
+@media all and (max-width : 450px){
+    .slide img{
+        width:auto;
+        height: 400px;
+        position: absolute;
+        left:50%;
+        transform: translateX(-50%);
+    }
+    .slide{
+        height: 400px!important;
+        overflow: hidden;
+    }
+    #slogan{
+        font-size:0.8em;
+    }
+    #fav a{
+        margin-bottom: 1em;
+    }
+    #artbox a{
+        width:calc(100% - 6px);
+    }
+}
+/* //-------------------------------------------------------------------------- */

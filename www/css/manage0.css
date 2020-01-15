@@ -1,0 +1,20 @@
+#certificate{
+    overflow: hidden;
+
+}
+#certificate>div{
+    max-width: 100%;
+    float: left;
+    width: calc((100% - 90px) / 3);
+    text-align: center;
+    margin-left: 20px;
+}
+#certificate>div img{
+    max-width: 100%;
+}
+@media all and (max-width:500px){
+    #certificate>div{
+        float: none;
+        width: 100%;
+    }
+}

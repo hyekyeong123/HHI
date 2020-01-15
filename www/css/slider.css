@@ -1,0 +1,96 @@
+.tabcont{
+    padding-top: 60px;
+}
+
+#slider{
+    outline: none;
+    padding:0px 10px;
+    max-width: 900px;
+    margin: 60px auto;
+    padding-bottom: 10px;
+}
+.slick-arrow{
+    width:31px;
+    height: 31px;
+    outline: none;
+    border:none;
+    position: absolute;
+    top:calc(50% - 58px);
+    transform: translateY(-50%);
+    z-index:1000;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+
+    background-size:contain;
+}
+.slick-prev{
+    background-image: url(../images/slider_btn_prev2.png);
+    left:-41px;
+}
+.slick-next{
+    right: -41px;
+    background-image: url(../images/slider_btn_next2.png);
+}
+.slide{
+    position: relative;
+}
+.slick-dots button{
+    color:transparent;
+    width:12px;
+    height: 12px;
+    background: transparent;
+    border:none;
+    outline: none;
+    cursor: pointer;
+    border-radius: 50%;
+    border:2px solid #4a70a3;
+    margin: 0px 7px;
+}
+.slick-dots>li{
+    display: inline-block;
+    vertical-align: middle;
+}
+.slick-dots{
+    text-align: center;
+    bottom:-40px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.slick-active button{
+    background-color: #4a70a3;
+}
+#slider .slide{
+    display: inline-block;
+    text-align: center;
+    /* //인라인일때 */
+
+}
+#slider .slide img{
+    /* margin: auto;
+    //블록일때 */
+
+    max-width: 100%;
+    /* //최대크기로 해야함 확대한다고 커지면 안되니까 */
+
+    /* //스크롤이 생기지 않으니까 이미지만 100퍼센트 만들어주면 됨 
+    상자는 이미 100%임 */
+}
+.slide p{
+    margin-top: 0.8em;
+    font-size: 16px;
+    color:#333;
+    height: 30px;
+
+}
+.tabcontp{
+    font:15px;
+}
+
+@media all and (max-width : 982px){
+    #slider{
+        width:calc(100% - 82px);
+    }
+}
